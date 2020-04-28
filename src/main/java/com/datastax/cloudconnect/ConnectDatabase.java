@@ -1,8 +1,14 @@
+<<<<<<< HEAD:src/main/java/com/datastax/cloudconnect/ConnectDatabase.java
 package com.datastax.cloudconnect;
+=======
+package connectdatabase;
+>>>>>>> ae13cd4cdfdfa64477122b1adfbac2fdc56abf77:src/main/java/ConnectDatabase.java
 
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.ResultSet;
 import com.datastax.oss.driver.api.core.cql.Row;
+import com.datastax.oss.driver.api.core.cql.*;
+import java.nio.file.Paths;
 
 public class ConnectDatabase {
 
