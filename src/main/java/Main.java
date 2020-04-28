@@ -15,15 +15,15 @@ public class Main {
              .build()) {
             
             session.execute(
-                            SimpleStatement.builder( "INSERT INTO users (last_name, first_name, email, address) VALUES (?,?,?,?)")
-                            .addPositionalValues("Smith", "Alex","asmith@gmail.com","123 Main st.")
-                            .build());
+                SimpleStatement.builder( "INSERT INTO users (last_name, first_name, email, address) VALUES (?,?,?,?)")
+                .addPositionalValues("Smith", "Alex","asmith@gmail.com","123 Main st.")
+                .build());
             
             
             ResultSet rs = session.execute(
-                                           SimpleStatement.builder("SELECT * FROM users WHERE last_name=?")
-                                           .addPositionalValue("Smith")
-                                           .build());
+               SimpleStatement.builder("SELECT * FROM users WHERE last_name=?")
+               .addPositionalValue("Smith")
+               .build());
             
             Row row = rs.one();
             System.out.format("%s %s\n", row.getString("first_name"), row.getString("email"));
