@@ -1,13 +1,10 @@
-
-package com.datastax.cloudconnect;
-
 import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.cql.ResultSet;
 import com.datastax.oss.driver.api.core.cql.Row;
 import com.datastax.oss.driver.api.core.cql.*;
 import java.nio.file.Paths;
 
-public class ConnectDatabase {
+public class Main {
 
    public static void main(String[] args) {
        // Create the CqlSession object:
