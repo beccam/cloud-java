@@ -26,7 +26,7 @@ public class Main {
                                            .build());
             
             Row row = rs.one();
-            System.out.format("%s %d\n", row.getString("first_name"), row.getString("email"));
+            System.out.format("%s %s\n", row.getString("first_name"), row.getString("email"));
             
             System.out.println("An error occurred.");
       
