@@ -16,13 +16,13 @@ public class Main {
             
             session.execute(
                             SimpleStatement.builder( "INSERT INTO users (last_name, first_name, email, address) VALUES (?,?,?,?)")
-                            .addPositionalValues('Smith', 'Alex','asmith@gmail.com','123 Main st.')
+                            .addPositionalValues("Smith", "Alex","asmith@gmail.com","123 Main st.")
                             .build());
             
             
             ResultSet rs = session.execute(
                                            SimpleStatement.builder("SELECT * FROM users WHERE last_name=?")
-                                           .addPositionalValue('Smith')
+                                           .addPositionalValue("Smith")
                                            .build());
             
             Row row = rs.one();
