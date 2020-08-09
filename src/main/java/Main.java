@@ -14,6 +14,13 @@ public class Main {
              .withKeyspace("user_management")
              .build()) {
             
+            cqlSession.execute("CREATE TABLE IF NOT EXISTS user_management.users (" 
+                  + " last_name text," 
+                  + " first_name text" 
+                  + " email text," 
+                  + " address text," + 
+                    " PRIMARY KEY((last_name), first_name, email)");
+            
             session.execute(
                 SimpleStatement.builder( "INSERT INTO users (last_name, first_name, email, address) VALUES (?,?,?,?)")
                 .addPositionalValues("Smith", "Alex","asmith@gmail.com","123 Main st.")
