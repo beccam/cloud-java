@@ -14,7 +14,7 @@ public class Main {
              .withKeyspace("user_management")
              .build()) {
             
-            cqlSession.execute("CREATE TABLE IF NOT EXISTS user_management.users (" 
+            session.execute("CREATE TABLE IF NOT EXISTS user_management.users (" 
                   + " last_name text," 
                   + " first_name text" 
                   + " email text," 
